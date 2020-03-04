@@ -2,14 +2,13 @@ require './character.rb'
 
 class Brave < Character
   
-    def attack
-        puts "勇者の攻撃！"
-        damege = @offense - monster.defense
-        monster.hp -= damege
-    
-        puts  <<~text
-        モンスターは#{damege}のダメ-ジを受けた！
-        モンスターの残りの体力は#{monster.hp}だ！
-        text
+    def attack(monster)
+      puts "勇者の攻撃！"
+      damage = @offense - monster.defense
+      monster.hp -= damage
+      puts <<~text
+      モンスターは#{damage}のダメ－ジを受けた！
+      モンスターの残りの体力は#{monster.hp}だ！
+      text
 　  end
 end
